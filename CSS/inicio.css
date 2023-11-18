@@ -1,0 +1,50 @@
+/* Estilos del banner */
+.banner {
+    background: #f8f9fa; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.banner h2 {
+    font-size: 2em; 
+    margin: 20px 0; 
+}
+
+.banner p {
+    max-width: 800px; 
+    margin: 20px; 
+}
+
+.banner img {
+    max-width: 100%; 
+    margin: 20px 0; 
+}
+
+/* Estilos del cuerpo */
+.cuerpo {
+    text-align: center;
+    width: 90%; 
+    margin: 0 auto; 
+    margin-top: 1px; 
+    background-color: #f0f0f0; 
+    padding: 1px; 
+}
+
+/* Estilos del contenido */
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos de la imagen en el contenido */
+.imagen {
+    max-width: 50%;
+}
+
+/* Estilos del párrafo en el contenido */
+.contenido p {
+    max-width: 50%;
+    margin-left: 20px;
+}

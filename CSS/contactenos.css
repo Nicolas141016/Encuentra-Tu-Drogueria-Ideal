@@ -1,0 +1,38 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contacto {
+    padding: 20px 0;
+}
+
+h2 {
+    color: #343a40;
+}
+
+.info-institucional p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+.formulario-contacto {
+    background-color: #e7f3fd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}

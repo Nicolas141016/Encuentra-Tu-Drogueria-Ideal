@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Encuentra tu drogueria ideal</title>
+    <link rel="icon" href="img/punto.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloso.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logotipo">
+            <center><img src="img/logoo2.png" width="40%"></center>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="drogueria.html">DROGUERIAS</a></li>
+                    <li><a href="contactenos.html">CONTACTANOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="info" class="mt-5">
+
+            <section class="filtro-barrio">
+                <label for="barrio">Explora por Barrios:</label>
+                <select id="barrio">
+                    <option value="todos">Todos</option>
+                    <option value="el-salado">El Salado</option>
+                    <option value="el-chico">El Chico</option>
+                    <option value="protecho">Protecho</option>
+                    <option value="portales">Portales</option>
+                    <option value="tierra-firme">Tierra Firme</option>
+                    <option value="la-gaviota">La Gaviota</option>
+                    <option value="centro">Centro</option>
+                    <option value="ambala">Ambala</option>
+                    <!-- Agrega más opciones según los barrios disponibles -->
+                </select>
+                <button onclick="filtrarPorBarrio()" class="btn btn-primary">Filtrar</button>
+            </section>
+            <center><h3 class="mb-4" data-barrio="todos">Informacion de Droguerias</h3></center>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="el-salado">
+                        <img src="img/far1.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmalinalli</h5>
+                            <p class="card-text">Direccion: Calle 15 # 23-45</p>
+                            <p class="card-text">Telefono: 3007899090</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="el-salado">
+                        <img src="img/far2.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmaluz</h5>
+                            <p class="card-text">Direccion: Carrera 8 # 12-30</p>
+                            <p class="card-text">Telefono: 3144567676</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm, Sábado: 9:00am - 2:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="el-salado">
+                        <img src="img/far3.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Copimas</h5>
+                            <p class="card-text">Direccion: Calle 20 # 34-56</p>
+                            <p class="card-text">Telefono: 3009878980</p>
+                            <p class="card-text">Horario: Todos los días: 24 horas</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- repetir este bloque para cada droguería adicional -->
+                <!-- Droguerias El chico -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="el-chico">
+                        <img src="img/far4.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmacia Colony</h5>
+                            <p class="card-text">Direccion: Calle 10 # 3-25</p>
+                            <p class="card-text">Telefono: 3109782673</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="el-chico">
+                        <img src="img/far5.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Drogueria Josías</h5>
+                            <p class="card-text">Direccion: Carrera 5 # 12-15</p>
+                            <p class="card-text">Telefono: 3209090989</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm, Sábado: 9:00am - 2:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="el-chico">
+                        <img src="img/far6.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farma Gomez</h5>
+                            <p class="card-text">Direccion: Calle 8 # 6-40</p>
+                            <p class="card-text">Telefono: 3122343435</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm,</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- repetir este bloque para cada droguería adicional -->
+                <!-- Droguerias Protecho -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="protecho">
+                        <img src="img/far7.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Jorge Vila</h5>
+                            <p class="card-text">Direccion: Carrera 25 # 10-15</p>
+                            <p class="card-text">Telefono: 3202022020</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="protecho">
+                        <img src="img/far8.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Drogueria Multidrogas</h5>
+                            <p class="card-text">Direccion: Calle 30 # 18-40</p>
+                            <p class="card-text">Telefono: 3144567545</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="protecho">
+                        <img src="img/far9.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Audifarma</h5>
+                            <p class="card-text">Direccion: Carrera 12 # 22-33</p>
+                            <p class="card-text">Telefono: 3202039485</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- repetir este bloque para cada droguería adicional -->
+                <!-- Droguerias Portales -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="portales">
+                        <img src="img/far10.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Prosocial</h5>
+                            <p class="card-text">Direccion: Calle 45 # 14-25</p>
+                            <p class="card-text">Telefono: 3109089090</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="portales">
+                        <img src="img/far11.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmamiga</h5>
+                            <p class="card-text">Direccion: Carrera 18 # 38-12</p>
+                            <p class="card-text">Telefono: 3209898778</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="portales">
+                        <img src="img/far12.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Pharma Integral</h5>
+                            <p class="card-text">Direccion: Calle 32 # 20-15</p>
+                            <p class="card-text">Telefono: 3154787656</p>
+                            <p class="card-text">Horario: Lunes a viernes: 8:00am - 6:00pm, Domingo: 12:00pm - 4:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- repetir este bloque para cada droguería adicional -->
+                <!-- Droguerias Tierra Firme -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="tierra-firme">
+                        <img src="img/far13.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmamédica</h5>
+                            <p class="card-text">Direccion: Calle 25 # 10-45</p>
+                            <p class="card-text">Telefono: 3202343232</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="tierra-firme">
+                        <img src="img/far14.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">City Fharma</h5>
+                            <p class="card-text">Direccion: Carrera 12 # 30-18</p>
+                            <p class="card-text">Telefono: 3007688980</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="tierra-firme">
+                        <img src="img/far15.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmacenter</h5>
+                            <p class="card-text">Direccion: Calle 18 # 22-14</p>
+                            <p class="card-text">Telefono: 3143433454</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- repetir este bloque para cada droguería adicional -->
+                <!-- Droguerias La Gaviota -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="la-gaviota">
+                        <img src="img/far16.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Jema Farma</h5>
+                            <p class="card-text">Direccion: Carrera 8 # 15-25</p>
+                            <p class="card-text">Telefono: 3132345434</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="la-gaviota">
+                        <img src="img/far17.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmaster</h5>
+                            <p class="card-text">Direccion: Calle 10 # 5-30</p>
+                            <p class="card-text">Telefono: 3232343222</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="la-gaviota">
+                        <img src="img/far18.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">TotalMedics</h5>
+                            <p class="card-text">Direccion: Calle 22 # 12-40</p>
+                            <p class="card-text">Telefono: 3156766554</p>
+                            <p class="card-text">Horario:Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- repetir este bloque para cada droguería adicional -->
+                <!-- Droguerias Centro -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="centro">
+                        <img src="img/far19.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Tu Farma</h5>
+                            <p class="card-text">Direccion: Carrera 3 # 7-15</p>
+                            <p class="card-text">Telefono: 3109829093</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="centro">
+                        <img src="img/far20.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Copifull</h5>
+                            <p class="card-text">Direccion: Calle 4 # 10-25</p>
+                            <p class="card-text">Telefono: 3208732423</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="centro">
+                        <img src="img/far21.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Drogas Pague Menos</h5>
+                            <p class="card-text">Direccion: Carrera 2 # 6-30</p>
+                            <p class="card-text">Telefono: 3143674343</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- repetir este bloque para cada droguería adicional -->
+                <!-- Droguerias Ambala -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="ambala">
+                        <img src="img/far22.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Pinzon</h5>
+                            <p class="card-text">Direccion: Carrera 10 # 15-25</p>
+                            <p class="card-text">Telefono: 3154322323</p>
+                            <p class="card-text">Horario: 24 horas</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="ambala">
+                        <img src="img/far23.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Walker</h5>
+                            <p class="card-text">Direccion: Calle 5 # 8-12</p>
+                            <p class="card-text">Telefono: 3145678989</p>
+                            <p class="card-text">Horario: Lunes a viernes: 7:30am - 6:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card" data-barrio="ambala">
+                        <img src="img/far24.jpg" alt="" class="img-drogueria">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmacia la Villa</h5>
+                            <p class="card-text">Direccion: Calle 7 # 12-30</p>
+                            <p class="card-text">Telefono: 3142322121</p>
+                            <p class="card-text">Horario: Lunes a sábado: 8:00am - 7:00pm</p>
+                            <a href="https://wa.me/3155215149" class="btn btn-primary whatsapp-btn">
+                            <img src="img/whatsaap.png" alt="WhatsApp" width="20" height="20"> Contactar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container-body">
+            <div class="colum1">
+                <h4>Mas informacion</h4>
+                <p>Con la ayuda de "Encuentra tu droguería ideal" los pequeños empresarios y farmacéuticos que se
+                    encuentran en estos pequeños barrios podrán darle más reconocimiento a sus negocios</p>
+            </div>
+            <div class="colum2">
+                <h3>Redes Sociales</h3>
+                <div class="icono">
+                    <a href="https://www.facebook.com/tu_pagina_de_facebook" target="_blank">
+                        <img src="img/facebook.png" width="8%" height="8%" alt="Facebook">
+                        <label>Siguenos en facebook</label>
+                    </a>
+                </div>
+
+                <div class="icono">
+                    <a href="https://twitter.com/tu_cuenta_de_twitter" target="_blank">
+                        <img src="img/twitter.png" width="8%" height="8%" alt="Twitter">
+                        <label>Siguenos en twitter</label>
+                    </a>
+                </div>
+            </div>
+            <div class="colum3">
+                <h4>Descubre una nueva forma de encontrar tu droguería ideal</h4>
+                <p>Explora las droguerías locales de tu barrio y descubre ofertas exclusivas. Tu salud, nuestra prioridad.</p>
+                <button onclick="window.location.href='drogueria.html#info'">Empieza ahora</button>
+            </div>
+        </div>
+        <div class="container-footer">
+            <center><div class="copyright">
+                © 2023 Todos los derechos reservados a Encuentra tu drogueria idel
+            </div></center>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var whatsappButtons = document.querySelectorAll('.whatsapp-btn');
+        whatsappButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.open(this.href, '_blank');
+            });
+        });
+    });
+</script>
+
+</html>

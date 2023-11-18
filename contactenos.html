@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contacto - Encuentra tu droguería ideal</title>
+    <link rel="icon" href="img/punto.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloso.css">
+    <link rel="stylesheet" type="text/css" href="css/contactenos.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logotipo">
+            <center> <img src="img/logoo2.png" width="40%"> </center>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="drogueria.html">DROGUERIAS</a></li>
+                    <li><a href="contactenos.html">CONTACTANOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <div class="container">
+                <h2>Contacto</h2>
+
+                <!-- Información institucional -->
+                <div class="info-institucional">
+                    <p>Bienvenido a nuestra página "Encuentra tu droguería ideal". Somos un equipo de estudiantes apasionados de la Universidad Nacional Abierta y a Distancia de Colombia.</p>
+                    <p>Si tienes alguna pregunta, sugerencia o simplemente deseas obtener más información, no dudes en contactarnos.</p>
+                    <p>Correo Institucional: <a href="mailto:correo@unad.edu.co">correo@unad.edu.co</a></p>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="formulario-contacto">
+                    <h3>¿Cómo podemos ayudarte?</h3>
+                    <form action="procesar_formulario.php" method="post" id="formulario-contacto">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" class="form-control" required></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" onclick="enviarFormulario()">Enviar</button>
+                    </form>
+
+                    <!-- Mensaje de enviado -->
+                    <div id="mensaje-enviado" style="display:none;">
+                        <p>¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container-body">
+            <div class="colum1">
+                <h4>Mas informacion</h4>
+                <p>Con la ayuda de "Encuentra tu droguería ideal" los pequeños empresarios y farmacéuticos que se
+                    encuentran en estos pequeños barrios podrán darle más reconocimiento a sus negocios</p>
+            </div>
+            <div class="colum2">
+                <h3>Redes Sociales</h3>
+                <div class="icono">
+                    <a href="https://www.facebook.com/tu_pagina_de_facebook" target="_blank">
+                        <img src="img/facebook.png" width="8%" height="8%" alt="Facebook">
+                        <label>Siguenos en facebook</label>
+                    </a>
+                </div>
+
+                <div class="icono">
+                    <a href="https://twitter.com/tu_cuenta_de_twitter" target="_blank">
+                        <img src="img/twitter.png" width="8%" height="8%" alt="Twitter">
+                        <label>Siguenos en twitter</label>
+                    </a>
+                </div>
+            </div>
+            <div class="colum3">
+                <h4>Descubre una nueva forma de encontrar tu droguería ideal</h4>
+                <p>Explora las droguerías locales de tu barrio y descubre ofertas exclusivas. Tu salud, nuestra prioridad.</p>
+                <button onclick="window.location.href='drogueria.html#info'">Empieza ahora</button>
+            </div>
+        </div>
+        <div class="container-footer">
+            <center><div class="copyright">
+                © 2023 Todos los derechos reservados a Encuentra tu drogueria idel
+            </div></center>
+        </div>
+    </footer>
+
+    <!-- Script para enviar el formulario -->
+    <script>
+        function enviarFormulario() {
+            // Validar campos antes de enviar
+            var nombre = document.getElementById('nombre').value;
+            var telefono = document.getElementById('telefono').value;
+            var correo = document.getElementById('correo').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            if (nombre.trim() === '' || telefono.trim() === '' || correo.trim() === '' || mensaje.trim() === '') {
+                alert('Todos los campos son obligatorios. Por favor, completa el formulario.');
+                return false; // Detiene el envío del formulario
+            }
+
+            // Después de enviar el formulario, oculta el formulario y muestra el mensaje
+            document.getElementById('formulario-contacto').style.display = 'none';
+            document.getElementById('mensaje-enviado').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>

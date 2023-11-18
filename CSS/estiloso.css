@@ -1,0 +1,169 @@
+/* Menú de navegación */
+header nav {
+    background: transparent;
+    transition: background 0.5s;
+}
+
+.menu {
+    text-align: center;
+    clear: both;
+    background: #204EFC;
+    padding: 0;
+    
+}
+
+.menu li {
+    display: inline-block;
+    box-shadow: 1px 1px 1px 1px solid #fff;
+}
+
+.menu li a {
+    clear: both;
+    padding: 5px 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: none;
+    text-decoration: none;
+    margin: 10px 20px 10px 0px;
+}
+
+.menu li a:hover {
+    background: #A3BCF7;
+    color: #000;
+}
+
+/* Cuerpo de la página */
+body {
+    background: #ffffff;
+    
+}
+
+/* Filtro por barrio */
+.filtro-barrio {
+    margin: 5px auto;
+    text-align: center;
+    max-width: 600px;
+    
+}
+
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 230px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    width: 50%;
+    max-width: 200px;
+}
+
+/* Tarjetas de droguerías */
+.container {
+    background-color: #f8f9fa;
+    padding: 1px;
+}
+
+
+.card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 7px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.img-drogueria {
+    width: 100%;
+    height: 300px;
+}
+
+
+.whatsapp-btn {
+    background-color: #25d366; /* Color verde de WhatsApp */
+    border-color: #25d366;
+}
+
+/* Cambia el color del botón en estado hover */
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Color verde más oscuro en hover */
+    border-color: #128C7E;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.container-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.colum1,
+.colum2,
+.colum3 {
+    flex: 0 1 30%;
+    max-width: 30%;
+    margin-bottom: 20px;
+}
+
+/* Redes Sociales */
+.icono {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.icono img {
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.icono label {
+    margin: 0;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    background-color: #247547;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
